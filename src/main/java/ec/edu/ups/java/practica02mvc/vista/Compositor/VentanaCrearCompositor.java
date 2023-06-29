@@ -30,19 +30,19 @@ public class VentanaCrearCompositor extends javax.swing.JInternalFrame {
         btnAceptar = new javax.swing.JButton();
         btnCancelar = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
-        txtNombreArtistico2 = new javax.swing.JTextField();
+        txtNumeroComposiciones = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        txtNombreArtistico3 = new javax.swing.JTextField();
-        txtNombreArtistico4 = new javax.swing.JTextField();
-        txtNombreArtistico5 = new javax.swing.JTextField();
-        txtNombreArtistico6 = new javax.swing.JTextField();
-        txtNombreArtistico7 = new javax.swing.JTextField();
-        txtNombreArtistico8 = new javax.swing.JTextField();
+        txtCodigo = new javax.swing.JTextField();
+        txtSalario = new javax.swing.JTextField();
+        txtNombre = new javax.swing.JTextField();
+        txtApellido = new javax.swing.JTextField();
+        txtEdad = new javax.swing.JTextField();
+        txtNacionalidad = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
 
@@ -67,7 +67,7 @@ public class VentanaCrearCompositor extends javax.swing.JInternalFrame {
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Numero de composiciones");
         txtNumeroDeComposiciones.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(49, 344, 179, 41));
-        txtNumeroDeComposiciones.add(txtNombreArtistico2, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 354, 211, -1));
+        txtNumeroDeComposiciones.add(txtNumeroComposiciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 354, 211, -1));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
@@ -98,12 +98,12 @@ public class VentanaCrearCompositor extends javax.swing.JInternalFrame {
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Nombre");
         txtNumeroDeComposiciones.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(49, 109, 104, 41));
-        txtNumeroDeComposiciones.add(txtNombreArtistico3, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 72, 211, -1));
-        txtNumeroDeComposiciones.add(txtNombreArtistico4, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 307, 211, -1));
-        txtNumeroDeComposiciones.add(txtNombreArtistico5, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 119, 211, -1));
-        txtNumeroDeComposiciones.add(txtNombreArtistico6, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 166, 211, -1));
-        txtNumeroDeComposiciones.add(txtNombreArtistico7, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 213, 211, -1));
-        txtNumeroDeComposiciones.add(txtNombreArtistico8, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 260, 211, -1));
+        txtNumeroDeComposiciones.add(txtCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 72, 211, -1));
+        txtNumeroDeComposiciones.add(txtSalario, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 307, 211, -1));
+        txtNumeroDeComposiciones.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 119, 211, -1));
+        txtNumeroDeComposiciones.add(txtApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 166, 211, -1));
+        txtNumeroDeComposiciones.add(txtEdad, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 213, 211, -1));
+        txtNumeroDeComposiciones.add(txtNacionalidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 260, 211, -1));
 
         jLabel11.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
@@ -112,7 +112,7 @@ public class VentanaCrearCompositor extends javax.swing.JInternalFrame {
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ec/edu/ups/java/practica02mvc/vistaPrincipal/WhatsApp Image 2023-06-22 at 9.51.11 AM.jpeg"))); // NOI18N
         jLabel10.setText("jLabel10");
-        txtNumeroDeComposiciones.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -90, 750, 530));
+        txtNumeroDeComposiciones.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -90, 750, 620));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -146,13 +146,13 @@ public class VentanaCrearCompositor extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JTextField txtNombreArtistico2;
-    private javax.swing.JTextField txtNombreArtistico3;
-    private javax.swing.JTextField txtNombreArtistico4;
-    private javax.swing.JTextField txtNombreArtistico5;
-    private javax.swing.JTextField txtNombreArtistico6;
-    private javax.swing.JTextField txtNombreArtistico7;
-    private javax.swing.JTextField txtNombreArtistico8;
+    private javax.swing.JTextField txtApellido;
+    private javax.swing.JTextField txtCodigo;
+    private javax.swing.JTextField txtEdad;
+    private javax.swing.JTextField txtNacionalidad;
+    private javax.swing.JTextField txtNombre;
+    private javax.swing.JTextField txtNumeroComposiciones;
     private javax.swing.JPanel txtNumeroDeComposiciones;
+    private javax.swing.JTextField txtSalario;
     // End of variables declaration//GEN-END:variables
 }
