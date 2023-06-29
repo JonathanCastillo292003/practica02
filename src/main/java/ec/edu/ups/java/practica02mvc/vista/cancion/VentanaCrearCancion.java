@@ -35,9 +35,13 @@ public class VentanaCrearCancion extends javax.swing.JInternalFrame {
         txtCodigo = new javax.swing.JTextField();
         txtTitulo = new javax.swing.JTextField();
         txtLetra = new javax.swing.JTextField();
-        txtTiempoEnMinutos = new javax.swing.JTextField();
+        txtCodigoAutor = new javax.swing.JTextField();
         btnAceptar = new javax.swing.JButton();
         btnCancelar = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        txtNombre = new javax.swing.JTextField();
+        txtTiempoEnMinutos1 = new javax.swing.JTextField();
         Pantalla = new javax.swing.JLabel();
 
         setClosable(true);
@@ -74,22 +78,52 @@ public class VentanaCrearCancion extends javax.swing.JInternalFrame {
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Tiempo en minutos");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(48, 229, 139, 41));
-        jPanel1.add(txtCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(234, 74, 305, -1));
-        jPanel1.add(txtTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(234, 117, 305, -1));
-        jPanel1.add(txtLetra, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 180, 305, -1));
-        jPanel1.add(txtTiempoEnMinutos, new org.netbeans.lib.awtextra.AbsoluteConstraints(234, 239, 310, -1));
+        jLabel3.setText("Ingrese el codigo del autor");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, 190, 41));
+        jPanel1.add(txtCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 70, 305, -1));
+
+        txtTitulo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtTituloActionPerformed(evt);
+            }
+        });
+        jPanel1.add(txtTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 130, 305, -1));
+        jPanel1.add(txtLetra, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 180, 305, -1));
+        jPanel1.add(txtCodigoAutor, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 280, 310, -1));
 
         btnAceptar.setText("Aceptar");
-        jPanel1.add(btnAceptar, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 320, -1, 34));
+        jPanel1.add(btnAceptar, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 380, -1, 34));
 
         btnCancelar.setText("Cancelar");
-        jPanel1.add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 310, -1, 34));
+        jPanel1.add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 380, -1, 34));
+
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setText("Nombre");
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 320, 139, 41));
+
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setText("Tiempo en minutos");
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, 139, 41));
+
+        txtNombre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNombreActionPerformed(evt);
+            }
+        });
+        jPanel1.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 330, 310, -1));
+
+        txtTiempoEnMinutos1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtTiempoEnMinutos1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(txtTiempoEnMinutos1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 230, 310, -1));
 
         Pantalla.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ec/edu/ups/java/practica02mvc/vistaPrincipal/WhatsApp Image 2023-06-22 at 9.51.11 AM.jpeg"))); // NOI18N
         Pantalla.setText("jLabel10");
-        jPanel1.add(Pantalla, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 750, 530));
+        jPanel1.add(Pantalla, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 760, 530));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -109,6 +143,18 @@ public class VentanaCrearCancion extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void txtTituloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTituloActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtTituloActionPerformed
+
+    private void txtNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNombreActionPerformed
+
+    private void txtTiempoEnMinutos1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTiempoEnMinutos1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtTiempoEnMinutos1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Pantalla;
@@ -119,10 +165,14 @@ public class VentanaCrearCancion extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField txtCodigo;
+    private javax.swing.JTextField txtCodigoAutor;
     private javax.swing.JTextField txtLetra;
-    private javax.swing.JTextField txtTiempoEnMinutos;
+    private javax.swing.JTextField txtNombre;
+    private javax.swing.JTextField txtTiempoEnMinutos1;
     private javax.swing.JTextField txtTitulo;
     // End of variables declaration//GEN-END:variables
 }

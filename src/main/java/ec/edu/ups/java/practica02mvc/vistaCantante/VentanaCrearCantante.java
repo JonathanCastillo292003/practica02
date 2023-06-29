@@ -53,7 +53,6 @@ public class VentanaCrearCantante extends javax.swing.JInternalFrame {
         txtEdad = new javax.swing.JTextField();
         txtNacionalidad = new javax.swing.JTextField();
         Pantalla = new javax.swing.JLabel();
-        txtNombreArtistico9 = new javax.swing.JTextField();
 
         jLabel7.setText("jLabel7");
 
@@ -146,7 +145,6 @@ public class VentanaCrearCantante extends javax.swing.JInternalFrame {
         Pantalla.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ec/edu/ups/java/practica02mvc/vistaPrincipal/WhatsApp Image 2023-06-22 at 9.51.11 AM.jpeg"))); // NOI18N
         Pantalla.setText("jLabel10");
         jPanel1.add(Pantalla, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 750, 530));
-        jPanel1.add(txtNombreArtistico9, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 200, 211, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -193,7 +191,6 @@ public class VentanaCrearCantante extends javax.swing.JInternalFrame {
     private javax.swing.JTextField txtGeneroMusical;
     private javax.swing.JTextField txtNacionalidad;
     private javax.swing.JTextField txtNombre;
-    private javax.swing.JTextField txtNombreArtistico9;
     private javax.swing.JTextField txtNumeroDeConciertos;
     private javax.swing.JTextField txtNumeroDeGiras;
     private javax.swing.JTextField txtNumeroDeSencillos;
