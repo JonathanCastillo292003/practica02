@@ -27,43 +27,28 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
         menuBar = new javax.swing.JMenuBar();
         menuCompositor = new javax.swing.JMenu();
         menuItemCrearCompositor = new javax.swing.JMenuItem();
+        menuitemAgregarCliente = new javax.swing.JMenuItem();
         menuItemBuscarCompositor = new javax.swing.JMenuItem();
         menuItemActualizarCompositor = new javax.swing.JMenuItem();
         menuItemEliminarCompositor = new javax.swing.JMenuItem();
         menuItemListarCompositor = new javax.swing.JMenuItem();
+        menuitemCancion = new javax.swing.JMenuItem();
         menuOperadora = new javax.swing.JMenu();
         menuItemCrearCantante = new javax.swing.JMenuItem();
         menuItemBuscarCantante = new javax.swing.JMenuItem();
         menuItemActualizarCantante = new javax.swing.JMenuItem();
         menuItemEliminarCantante = new javax.swing.JMenuItem();
         menuItemListarCantante = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
         menuOpciones = new javax.swing.JMenu();
         menuItemSalirOpciones = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ec/edu/ups/java/practica02mvc/vistaPrincipal/WhatsApp Image 2023-06-22 at 9.51.11 AM.jpeg"))); // NOI18N
-        jLabel1.setText("jLabel1");
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1664, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         menuCompositor.setMnemonic('f');
         menuCompositor.setText("Compositor");
@@ -76,6 +61,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
         menuCompositor.add(menuItemCrearCompositor);
+
+        menuitemAgregarCliente.setText(" Agregar cliente");
+        menuCompositor.add(menuitemAgregarCliente);
 
         menuItemBuscarCompositor.setMnemonic('a');
         menuItemBuscarCompositor.setText("Buscar");
@@ -111,6 +99,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
         menuCompositor.add(menuItemListarCompositor);
+
+        menuitemCancion.setText(" Cancion");
+        menuCompositor.add(menuitemCancion);
 
         menuBar.add(menuCompositor);
 
@@ -161,6 +152,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         });
         menuOperadora.add(menuItemListarCantante);
 
+        jMenuItem2.setText(" Disco");
+        menuOperadora.add(jMenuItem2);
+
         menuBar.add(menuOperadora);
 
         menuOpciones.setText("Opciones");
@@ -182,7 +176,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(36, 36, 36)
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
@@ -275,7 +269,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JMenuBar menuBar;
     private javax.swing.JMenu menuCompositor;
@@ -292,5 +286,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem menuItemSalirOpciones;
     private javax.swing.JMenu menuOpciones;
     private javax.swing.JMenu menuOperadora;
+    private javax.swing.JMenuItem menuitemAgregarCliente;
+    private javax.swing.JMenuItem menuitemCancion;
     // End of variables declaration//GEN-END:variables
 }

@@ -112,7 +112,7 @@ public class VentanaCrearCompositor extends javax.swing.JInternalFrame {
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ec/edu/ups/java/practica02mvc/vistaPrincipal/WhatsApp Image 2023-06-22 at 9.51.11 AM.jpeg"))); // NOI18N
         jLabel10.setText("jLabel10");
-        txtNumeroDeComposiciones.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 750, 530));
+        txtNumeroDeComposiciones.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -90, 750, 530));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
