@@ -29,12 +29,22 @@ public class VentanaCrearCompositor extends javax.swing.JInternalFrame {
         txtNumeroDeComposiciones = new javax.swing.JPanel();
         btnAceptar = new javax.swing.JButton();
         btnCancelar = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        txtCancionesTop100 = new javax.swing.JTextField();
-        txtClientes = new javax.swing.JTextField();
         txtNombreArtistico2 = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        txtNombreArtistico3 = new javax.swing.JTextField();
+        txtNombreArtistico4 = new javax.swing.JTextField();
+        txtNombreArtistico5 = new javax.swing.JTextField();
+        txtNombreArtistico6 = new javax.swing.JTextField();
+        txtNombreArtistico7 = new javax.swing.JTextField();
+        txtNombreArtistico8 = new javax.swing.JTextField();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
 
         setClosable(true);
         setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
@@ -45,72 +55,64 @@ public class VentanaCrearCompositor extends javax.swing.JInternalFrame {
         txtNumeroDeComposiciones.setBackground(new java.awt.Color(153, 153, 255));
         txtNumeroDeComposiciones.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Crear Compositor", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 24))); // NOI18N
         txtNumeroDeComposiciones.setForeground(new java.awt.Color(153, 153, 255));
+        txtNumeroDeComposiciones.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnAceptar.setText("Aceptar");
+        txtNumeroDeComposiciones.add(btnAceptar, new org.netbeans.lib.awtextra.AbsoluteConstraints(206, 489, -1, 37));
 
         btnCancelar.setText("Cancelar");
-
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel1.setText("Canciones Top 100 Billboard");
-
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel2.setText("Clientes");
+        txtNumeroDeComposiciones.add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(332, 489, -1, 37));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Numero de composiciones");
+        txtNumeroDeComposiciones.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(49, 344, 179, 41));
+        txtNumeroDeComposiciones.add(txtNombreArtistico2, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 354, 211, -1));
 
-        javax.swing.GroupLayout txtNumeroDeComposicionesLayout = new javax.swing.GroupLayout(txtNumeroDeComposiciones);
-        txtNumeroDeComposiciones.setLayout(txtNumeroDeComposicionesLayout);
-        txtNumeroDeComposicionesLayout.setHorizontalGroup(
-            txtNumeroDeComposicionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(txtNumeroDeComposicionesLayout.createSequentialGroup()
-                .addGap(44, 44, 44)
-                .addGroup(txtNumeroDeComposicionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(txtNumeroDeComposicionesLayout.createSequentialGroup()
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(72, 72, 72)
-                        .addComponent(txtNombreArtistico2, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, txtNumeroDeComposicionesLayout.createSequentialGroup()
-                        .addGroup(txtNumeroDeComposicionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, txtNumeroDeComposicionesLayout.createSequentialGroup()
-                                .addGap(121, 121, 121)
-                                .addComponent(btnAceptar)))
-                        .addGroup(txtNumeroDeComposicionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(txtNumeroDeComposicionesLayout.createSequentialGroup()
-                                .addGap(58, 58, 58)
-                                .addComponent(txtCancionesTop100, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE))
-                            .addGroup(txtNumeroDeComposicionesLayout.createSequentialGroup()
-                                .addGap(85, 85, 85)
-                                .addComponent(btnCancelar)
-                                .addGap(0, 0, Short.MAX_VALUE))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, txtNumeroDeComposicionesLayout.createSequentialGroup()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(147, 147, 147)
-                        .addComponent(txtClientes, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)))
-                .addGap(216, 216, 216))
-        );
-        txtNumeroDeComposicionesLayout.setVerticalGroup(
-            txtNumeroDeComposicionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, txtNumeroDeComposicionesLayout.createSequentialGroup()
-                .addGap(53, 53, 53)
-                .addGroup(txtNumeroDeComposicionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtNombreArtistico2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(txtNumeroDeComposicionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtCancionesTop100, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(txtNumeroDeComposicionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtClientes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 114, Short.MAX_VALUE)
-                .addGroup(txtNumeroDeComposicionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnAceptar, javax.swing.GroupLayout.DEFAULT_SIZE, 37, Short.MAX_VALUE)
-                    .addComponent(btnCancelar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(53, 53, 53))
-        );
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("Apellido");
+        txtNumeroDeComposiciones.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(49, 156, 104, 41));
+
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("Salario");
+        txtNumeroDeComposiciones.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(49, 297, 104, 41));
+
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("Edad");
+        txtNumeroDeComposiciones.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(49, 203, 104, 41));
+
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setText("Codigo");
+        txtNumeroDeComposiciones.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(49, 62, 104, 41));
+
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setText("Nacionalidad");
+        txtNumeroDeComposiciones.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(49, 250, 104, 41));
+
+        jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setText("Nombre");
+        txtNumeroDeComposiciones.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(49, 109, 104, 41));
+        txtNumeroDeComposiciones.add(txtNombreArtistico3, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 72, 211, -1));
+        txtNumeroDeComposiciones.add(txtNombreArtistico4, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 307, 211, -1));
+        txtNumeroDeComposiciones.add(txtNombreArtistico5, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 119, 211, -1));
+        txtNumeroDeComposiciones.add(txtNombreArtistico6, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 166, 211, -1));
+        txtNumeroDeComposiciones.add(txtNombreArtistico7, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 213, 211, -1));
+        txtNumeroDeComposiciones.add(txtNombreArtistico8, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 260, 211, -1));
+
+        jLabel11.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel11.setText("Crear compositor");
+        txtNumeroDeComposiciones.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 10, 150, 30));
+
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ec/edu/ups/java/practica02mvc/vistaPrincipal/WhatsApp Image 2023-06-22 at 9.51.11 AM.jpeg"))); // NOI18N
+        jLabel10.setText("jLabel10");
+        txtNumeroDeComposiciones.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 750, 530));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -123,7 +125,7 @@ public class VentanaCrearCompositor extends javax.swing.JInternalFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addGroup(layout.createSequentialGroup()
                 .addComponent(txtNumeroDeComposiciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
@@ -135,12 +137,22 @@ public class VentanaCrearCompositor extends javax.swing.JInternalFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAceptar;
     private javax.swing.JButton btnCancelar;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JTextField txtCancionesTop100;
-    private javax.swing.JTextField txtClientes;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JTextField txtNombreArtistico2;
+    private javax.swing.JTextField txtNombreArtistico3;
+    private javax.swing.JTextField txtNombreArtistico4;
+    private javax.swing.JTextField txtNombreArtistico5;
+    private javax.swing.JTextField txtNombreArtistico6;
+    private javax.swing.JTextField txtNombreArtistico7;
+    private javax.swing.JTextField txtNombreArtistico8;
     private javax.swing.JPanel txtNumeroDeComposiciones;
     // End of variables declaration//GEN-END:variables
 }
