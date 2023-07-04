@@ -20,6 +20,7 @@ public class Cantante extends Persona {
     private int numeroDeGiras; //atributo numerico que guarda el numero de giras de la clase cancion
     private List<Disco> discografia; // atributo lista de discos que guarda la discografica de la calse Cancion
 
+
     /*
      * Constructor vacío de la clase Cancion
      */
@@ -40,14 +41,15 @@ public class Cantante extends Persona {
     @param nacionalidad: String, nacionalidad de la persona
     @param salario: double, salario de la persona
      */
-    public Cantante(String nombreArtistico, String generoMusical, int numeroDeSencillos, int numeroDeConciertos, int numeroDeGiras, int codigo, String nombre, String apellido, int edad, String nacionalidad, double salario) {
+    public Cantante(String nombreArtistico, String generoMusical, int numeroDeSencillos, int numeroDeConciertos, int numeroDeGiras, List<Disco> discografia, String codigo, String nombre, String apellido, int edad, String nacionalidad, double salario) {
         super(codigo, nombre, apellido, edad, nacionalidad, salario);
         this.nombreArtistico = nombreArtistico;
         this.generoMusical = generoMusical;
         this.numeroDeSencillos = numeroDeSencillos;
         this.numeroDeConciertos = numeroDeConciertos;
         this.numeroDeGiras = numeroDeGiras;
-        this.discografia = new ArrayList<>();
+        this.discografia = discografia;
+
     }
 
     //Gettes and Setters de la clase Cancion
@@ -99,13 +101,52 @@ public class Cantante extends Persona {
         this.discografia = discografia;
     }
 
+    public void AgregarDisco(Disco disco) {
+        discografia.add(disco);
+    }
+
+    public Disco readDisco(int cod) {
+
+        for (Disco disco : discografia) {
+            if (disco.getCodigo() == (cod)) {
+                return disco;
+            }
+        }
+        return null;
+    }
+
+    public void updateDisco(Disco disco) {
+        for (int i = 0; i < discografia.size(); i++) {
+            Disco discoGuar = discografia.get(i);
+            if (discoGuar.getCodigo() == (disco.getCodigo())) {
+                discografia.set(i, disco);
+                break;
+            }
+        }
+    }
+
+    public void deleteDisco(int cod) {
+        for (int i = 0; i < discografia.size(); i++) {
+            Disco discosad = discografia.get(i);
+            if (discosad.getCodigo()==(cod)) {
+                discografia.remove(i);
+                break;
+            }
+        }
+    }
+    public List<Disco> listar(){
+        return discografia;
+    }
+
     /*
     Metodo toString que devuelve de forma de string los atributos
      */
+
     @Override
     public String toString() {
-        return "Persona{" + "codigo=" + super.getCodigo() + ", nombre=" + super.getNombre() + ", apellido=" + super.getApellido() + ", edad=" + super.getEdad() + ", nacionalidad=" + super.getNacionalidad() + ", salario=" + super.getSalario() + '}' + "Cantante{" + "nombreArtistico=" + nombreArtistico + ", generoMusical=" + generoMusical + ", numeroDeSencillos=" + numeroDeSencillos + ", numeroDeConciertos=" + numeroDeConciertos + ", numeroDeGiras=" + numeroDeGiras + ", discografia=" + discografia + '}';
+        return "Cantante{" + "nombreArtistico=" + nombreArtistico + ", generoMusical=" + generoMusical + ", numeroDeSencillos=" + numeroDeSencillos + ", numeroDeConciertos=" + numeroDeConciertos + ", numeroDeGiras=" + numeroDeGiras + ", discografia=" + discografia + '}';
     }
+
 
     /*
      * Retorna el valor del hashcode de la instancia actual de la clase Cantante
@@ -171,7 +212,7 @@ Calcula el salario del cantante teniendo en cuenta diferentes factores.
 
     /*
     Metodo agregarDisco con los atributos de la clase Disco
-    */
+     */
     public void agregarDisco(int codigo, String nombre, int anioDeLanzamiento) {
         Disco disco = new Disco(codigo, nombre, anioDeLanzamiento);
         //Agrega el disco a la lista discografia

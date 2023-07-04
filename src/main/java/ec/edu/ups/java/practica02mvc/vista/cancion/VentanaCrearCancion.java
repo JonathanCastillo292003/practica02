@@ -4,19 +4,41 @@
  */
 package ec.edu.ups.java.practica02mvc.vista.cancion;
 
+import ec.edu.ups.java.practica02mvc.controlador.ControladorCantante;
+import ec.edu.ups.java.practica02mvc.controlador.ControladorCompositor;
+import ec.edu.ups.java.practica02mvc.modelo.Cancion;
+import ec.edu.ups.java.practica02mvc.modelo.Cantante;
+import ec.edu.ups.java.practica02mvc.modelo.Compositor;
+import ec.edu.ups.java.practica02mvc.modelo.Disco;
+import java.util.Locale;
+import java.util.ResourceBundle;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Personal
  */
 public class VentanaCrearCancion extends javax.swing.JInternalFrame {
 
+    private ControladorCompositor controladorCantante;
+    private ResourceBundle mensajes;
     /**
      * Creates new form VentanaCrearCancion
      */
-    public VentanaCrearCancion() {
+    public VentanaCrearCancion(ControladorCompositor controladorCantante) {
         initComponents();
+        this.controladorCantante = controladorCantante;
     }
-
+    public void cambiarIdioma(Locale localizacion){
+        mensajes = ResourceBundle.getBundle("mensajes.mensaje", localizacion);
+        jLabel4.setText(mensajes.getString("txtCodigo"));
+        jLabel5.setText(mensajes.getString("txtTitulo"));
+        jLabel2.setText(mensajes.getString("txtLetra"));        
+        jLabel6.setText(mensajes.getString("txtTiempoEnMinutos1"));
+        jLabel7.setText(mensajes.getString("txxtCodigoCantante1"));
+        jLabel3.setText(mensajes.getString("txtNombreCantante"));
+        
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -32,16 +54,16 @@ public class VentanaCrearCancion extends javax.swing.JInternalFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
         txtCodigo = new javax.swing.JTextField();
         txtTitulo = new javax.swing.JTextField();
         txtLetra = new javax.swing.JTextField();
-        txtCodigoAutor = new javax.swing.JTextField();
-        btnAceptar = new javax.swing.JButton();
-        btnCancelar = new javax.swing.JButton();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        txtNombre = new javax.swing.JTextField();
+        txtNombreCantante = new javax.swing.JTextField();
         txtTiempoEnMinutos1 = new javax.swing.JTextField();
+        txxtCodigoCantante1 = new javax.swing.JTextField();
+        btnCancelar = new javax.swing.JButton();
+        btnAceptar1 = new javax.swing.JButton();
         Pantalla = new javax.swing.JLabel();
 
         setClosable(true);
@@ -78,52 +100,46 @@ public class VentanaCrearCancion extends javax.swing.JInternalFrame {
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Ingrese el codigo del autor");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, 190, 41));
-        jPanel1.add(txtCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 70, 305, -1));
+        jLabel3.setText("Nombre: ");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 350, 210, 41));
 
-        txtTitulo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtTituloActionPerformed(evt);
-            }
-        });
-        jPanel1.add(txtTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 130, 305, -1));
-        jPanel1.add(txtLetra, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 180, 305, -1));
-        jPanel1.add(txtCodigoAutor, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 280, 310, -1));
-
-        btnAceptar.setText("Aceptar");
-        jPanel1.add(btnAceptar, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 380, -1, 34));
-
-        btnCancelar.setText("Cancelar");
-        jPanel1.add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 380, -1, 34));
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("Tiempo en minutos");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(48, 229, 139, 41));
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("Nombre");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 320, 139, 41));
+        jLabel7.setText("Ingrese el codigo del autor:");
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 290, 210, 41));
+        jPanel1.add(txtCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(234, 74, 305, -1));
+        jPanel1.add(txtTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(234, 117, 305, -1));
+        jPanel1.add(txtLetra, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 180, 305, -1));
 
-        jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setText("Tiempo en minutos");
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, 139, 41));
+        txtNombreCantante.setEditable(false);
+        jPanel1.add(txtNombreCantante, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 360, 310, -1));
+        jPanel1.add(txtTiempoEnMinutos1, new org.netbeans.lib.awtextra.AbsoluteConstraints(234, 239, 310, -1));
+        jPanel1.add(txxtCodigoCantante1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 300, 310, -1));
 
-        txtNombre.addActionListener(new java.awt.event.ActionListener() {
+        btnCancelar.setText("Cancelar");
+        btnCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNombreActionPerformed(evt);
+                btnCancelarActionPerformed(evt);
             }
         });
-        jPanel1.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 330, 310, -1));
+        jPanel1.add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 450, -1, 34));
 
-        txtTiempoEnMinutos1.addActionListener(new java.awt.event.ActionListener() {
+        btnAceptar1.setText("Aceptar");
+        btnAceptar1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtTiempoEnMinutos1ActionPerformed(evt);
+                btnAceptar1ActionPerformed(evt);
             }
         });
-        jPanel1.add(txtTiempoEnMinutos1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 230, 310, -1));
+        jPanel1.add(btnAceptar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 450, -1, 34));
 
         Pantalla.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ec/edu/ups/java/practica02mvc/vistaPrincipal/WhatsApp Image 2023-06-22 at 9.51.11 AM.jpeg"))); // NOI18N
         Pantalla.setText("jLabel10");
-        jPanel1.add(Pantalla, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 760, 530));
+        jPanel1.add(Pantalla, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 750, 530));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -143,36 +159,57 @@ public class VentanaCrearCancion extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtTituloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTituloActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtTituloActionPerformed
+    private void btnAceptar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAceptar1ActionPerformed
+        String nombre = txtTitulo.getText();
+        String letra = txtLetra.getText();
+        int codigo = Integer.parseInt(txtCodigo.getText());
+        double tiempo = (double) Integer.parseInt(txtNombreCantante.getText());
 
-    private void txtNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtNombreActionPerformed
+        Cancion cancion = new Cancion();
+        cancion.setCodigo(codigo);
+        cancion.setLetra(letra);
+        cancion.setTiempoEnMinutos(tiempo);
+        cancion.setTitulo(nombre);
+         String codigation = txxtCodigoCantante1.getText();
 
-    private void txtTiempoEnMinutos1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTiempoEnMinutos1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtTiempoEnMinutos1ActionPerformed
+        Compositor compositor = controladorCantante.buscar(codigation);
+        compositor.AgregarCancion(cancion);
+        controladorCantante.update(compositor);
+        JOptionPane.showMessageDialog(this, "Cancion Añadido");
+        limpiarCampos();
+    }//GEN-LAST:event_btnAceptar1ActionPerformed
 
+    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCancelarActionPerformed
+    public void limpiarCampos() {
+        this.txtCodigo.setText("");
+
+        this.txtLetra.setText("");
+        this.txtNombreCantante.setText("");
+        this.txtTiempoEnMinutos1.setText("");
+        this.txxtCodigoCantante1.setText("");
+        this.txtTitulo.setText("");
+
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Pantalla;
-    private javax.swing.JButton btnAceptar;
+    private javax.swing.JButton btnAceptar1;
     private javax.swing.JButton btnCancelar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField txtCodigo;
-    private javax.swing.JTextField txtCodigoAutor;
     private javax.swing.JTextField txtLetra;
-    private javax.swing.JTextField txtNombre;
+    private javax.swing.JTextField txtNombreCantante;
     private javax.swing.JTextField txtTiempoEnMinutos1;
     private javax.swing.JTextField txtTitulo;
+    private javax.swing.JTextField txxtCodigoCantante1;
     // End of variables declaration//GEN-END:variables
 }

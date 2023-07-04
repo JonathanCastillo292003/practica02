@@ -3,10 +3,12 @@
  */
 package ec.edu.ups.java.practica02mvc.modelo;
 
+import java.util.Objects;
+
 
 public abstract class Persona {
 
-    private int codigo; // atributo entero que guarda el código de la persona
+    private String codigo; // atributo entero que guarda el código de la persona
     private String nombre; // atributo String que guarda el nombre de la persona
     private String apellido; // atributo String que guarda el apellido de la persona
     private int edad; // atributo entero que guarda la edad de la persona
@@ -28,7 +30,7 @@ public abstract class Persona {
      * @param nacionalidad: String, nacionalidad de la persona
      * @param salario: double, salario de la persona
      */
-    public Persona(int codigo, String nombre, String apellido, int edad, String nacionalidad, double salario) {
+    public Persona(String codigo, String nombre, String apellido, int edad, String nacionalidad, double salario) {
         this.codigo = codigo;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -45,11 +47,11 @@ public abstract class Persona {
     /*
      * Getter and Setter de los parametros
      */
-    public int getCodigo() {
+    public String getCodigo() {
         return codigo;
     }
 
-    public void setCodigo(int codigo) {
+    public void setCodigo(String codigo) {
         this.codigo = codigo;
     }
 
@@ -106,18 +108,14 @@ public abstract class Persona {
      * @return el valor del hashcode de la instancia actual de la clase Persona
      */
     @Override
-    public int hashCode() {
-        int hash = 7;
-        hash = 89 * hash + this.codigo;
-        return hash;
-    }
+   
 
     /*
     Compara si la instancia actual de la clase Persona es igual a otro objeto.
     @param obj objeto a comparar con la instancia actual de la clase Persona
     @return true si la instancia actual de la clase Persona es igual al objeto pasado como parametro,
      */
-    @Override
+
     public boolean equals(Object obj) {
         if (obj == null) {
             return false;
@@ -130,6 +128,13 @@ public abstract class Persona {
             return false;
         }
         return true;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 41 * hash + Objects.hashCode(this.codigo);
+        return hash;
     }
 
 }

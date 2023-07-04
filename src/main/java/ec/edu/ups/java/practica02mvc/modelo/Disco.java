@@ -3,12 +3,14 @@
  */
 package ec.edu.ups.java.practica02mvc.modelo;
 
+import java.util.List;
+
 public class Disco {
 
     private int codigo; // atributo numerico que guarda el codigo del disco
     private String nombre; // atributo String que guarda el nombre del disco
     private int anioDeLanzamiento; // atributo numerico que guarda el ano de lanzamiento
-
+ 
     /*
      * Constructor vacío de la clase Cancion
      */
@@ -26,6 +28,11 @@ public class Disco {
         this.nombre = nombre;
         this.anioDeLanzamiento = anioDeLanzamiento;
     }
+    
+
+    
+   
+    
 
     //Getters and Setters de la clase Disco
     public int getCodigo() {
